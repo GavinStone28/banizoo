@@ -11,6 +11,8 @@
         <meta name="description" content="Banizoo - Business Service HTML5 Template">
         <meta name="author" content="xenioushk">
         <link rel="shortcut icon" href="images/favicon.png" />
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -1653,7 +1655,16 @@
             </section>
 
         </footer>
-
+        <!-- React Stuff -->
+        <div id="output"></div>
+        <!-- Load Babel -->
+        <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- Your custom script here -->
+        <script type="text/babel">
+        const getMessage = () => "Hello World";
+        document.getElementById('output').innerHTML = getMessage();
+        </script>
         <!-- BACK TO TOP BUTTON  -->
 
         <a id="backTop">Back To Top</a>
